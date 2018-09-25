@@ -1,0 +1,7 @@
+*** Settings ***
+Library		Selenium2Library
+
+*** Testcases ***
+Test with Chrome
+	Open Browser   http://www.google.com   chrome
+	#[Teardown]   Close Browser

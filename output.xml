@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180924 11:31:20.043" generator="Robot 3.0.3 (Python 2.7.10 on darwin)">
+<suite source="/Users/macpro/project/robot_train_01/customer.robot" id="s1" name="Customer">
+<test id="s1-t1" name="Test 1">
+<kw name="Fill in customer information">
+<arguments>
+<arg>${user_info_1}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.email}</arg>
+</arguments>
+<msg timestamp="20180924 11:31:20.070" level="FAIL">Resolving variable '${user.email}' failed: AttributeError: 'unicode' object has no attribute 'email'</msg>
+<status status="FAIL" endtime="20180924 11:31:20.070" starttime="20180924 11:31:20.070"></status>
+</kw>
+<status status="FAIL" endtime="20180924 11:31:20.071" starttime="20180924 11:31:20.070"></status>
+</kw>
+<status status="FAIL" endtime="20180924 11:31:20.071" critical="yes" starttime="20180924 11:31:20.069">Resolving variable '${user.email}' failed: AttributeError: 'unicode' object has no attribute 'email'</status>
+</test>
+<status status="FAIL" endtime="20180924 11:31:20.071" starttime="20180924 11:31:20.046"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Customer" pass="0">Customer</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
