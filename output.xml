@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180924 11:31:20.043" generator="Robot 3.0.3 (Python 2.7.10 on darwin)">
-<suite source="/Users/macpro/project/robot_train_01/customer.robot" id="s1" name="Customer">
-<test id="s1-t1" name="Test 1">
-<kw name="Fill in customer information">
+<robot generated="20180924 16:27:27.603" generator="Robot 3.0.4 (Python 2.7.11 on darwin)">
+<suite source="/Users/macpro/project/robot_train_01/angular.robot" id="s1" name="Angular">
+<test id="s1-t1" name="try upload angular">
+<kw name="Open upload web">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>${user_info_1}</arg>
+<arg>http://nervgh.github.io/pages/angular-file-upload/examples/simple/</arg>
+<arg>chrome</arg>
 </arguments>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<msg timestamp="20180924 16:27:27.721" level="INFO">Opening browser 'chrome' to base url 'http://nervgh.github.io/pages/angular-file-upload/examples/simple/'.</msg>
+<status status="PASS" endtime="20180924 16:27:31.182" starttime="20180924 16:27:27.721"></status>
+</kw>
+<status status="PASS" endtime="20180924 16:27:31.182" starttime="20180924 16:27:27.720"></status>
+</kw>
+<kw name="Select single">
 <arguments>
-<arg>${user.email}</arg>
+<arg>index01.png</arg>
 </arguments>
-<msg timestamp="20180924 11:31:20.070" level="FAIL">Resolving variable '${user.email}' failed: AttributeError: 'unicode' object has no attribute 'email'</msg>
-<status status="FAIL" endtime="20180924 11:31:20.070" starttime="20180924 11:31:20.070"></status>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/macpro/project/robot_train_01/${file}</arg>
+</arguments>
+<status status="PASS" endtime="20180924 16:27:31.283" starttime="20180924 16:27:31.183"></status>
 </kw>
-<status status="FAIL" endtime="20180924 11:31:20.071" starttime="20180924 11:31:20.070"></status>
+<status status="PASS" endtime="20180924 16:27:31.283" starttime="20180924 16:27:31.182"></status>
 </kw>
-<status status="FAIL" endtime="20180924 11:31:20.071" critical="yes" starttime="20180924 11:31:20.069">Resolving variable '${user.email}' failed: AttributeError: 'unicode' object has no attribute 'email'</status>
+<kw name="Select single">
+<arguments>
+<arg>index02.png</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/macpro/project/robot_train_01/${file}</arg>
+</arguments>
+<status status="PASS" endtime="20180924 16:27:31.304" starttime="20180924 16:27:31.284"></status>
+</kw>
+<status status="PASS" endtime="20180924 16:27:31.304" starttime="20180924 16:27:31.283"></status>
+</kw>
+<kw name="Select single">
+<arguments>
+<arg>index03.png</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/macpro/project/robot_train_01/${file}</arg>
+</arguments>
+<status status="PASS" endtime="20180924 16:27:31.327" starttime="20180924 16:27:31.304"></status>
+</kw>
+<status status="PASS" endtime="20180924 16:27:31.327" starttime="20180924 16:27:31.304"></status>
+</kw>
+<kw name="Page Should have 3 files">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr</arg>
+<arg>limit=3</arg>
+</arguments>
+<msg timestamp="20180924 16:27:31.341" level="INFO">Current page contains 3 element(s).</msg>
+<status status="PASS" endtime="20180924 16:27:31.341" starttime="20180924 16:27:31.327"></status>
+</kw>
+<status status="PASS" endtime="20180924 16:27:31.341" starttime="20180924 16:27:31.327"></status>
+</kw>
+<kw name="Upload file">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/div/div[2]/div[2]/table/tbody/tr[${order}]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20180924 16:27:31.342" level="INFO">Clicking element 'xpath:/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180924 16:27:31.842" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180924 16:27:31.842" starttime="20180924 16:27:31.354"></status>
+</kw>
+<msg timestamp="20180924 16:27:31.844" level="FAIL">Element with locator 'xpath:/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]' not found.</msg>
+<status status="FAIL" endtime="20180924 16:27:31.845" starttime="20180924 16:27:31.342"></status>
+</kw>
+<status status="FAIL" endtime="20180924 16:27:31.845" starttime="20180924 16:27:31.341"></status>
+</kw>
+<status status="FAIL" endtime="20180924 16:27:31.845" critical="yes" starttime="20180924 16:27:27.720">Element with locator 'xpath:/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]' not found.</status>
 </test>
-<status status="FAIL" endtime="20180924 11:31:20.071" starttime="20180924 11:31:20.046"></status>
+<status status="FAIL" endtime="20180924 16:27:31.846" starttime="20180924 16:27:27.606"></status>
 </suite>
 <statistics>
 <total>
@@ -28,7 +100,7 @@
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Customer" pass="0">Customer</stat>
+<stat fail="1" id="s1" name="Angular" pass="0">Angular</stat>
 </suite>
 </statistics>
 <errors>
