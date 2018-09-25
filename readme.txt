@@ -1,6 +1,7 @@
 lib แนะนำ
 -SeleniumLibrary ไม่ต้องใช้ version2
 -robotframework-faker สร้าง data Automatic
+pybot -d output_dir *.robot
 
 git 101
 
@@ -19,5 +20,10 @@ git pull origin master  #เอาไฟล์ลงมาที่เครื�
 
 jenkins 101
 
-create new project & new item
+1.create new project & new item
+2.configure
+
+plugins
+1.robotframework
+2.build monitor
 

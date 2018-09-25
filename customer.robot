@@ -1,5 +1,5 @@
 *** Settings ***
-Library Collections
+Library  Collections
 
 *** Variables ***
 &{user_info_1}  email=somkiat@gmail.com  
