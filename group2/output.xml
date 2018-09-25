@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180925 13:28:24.499" generator="Robot 3.0.3 (Python 2.7.10 on darwin)">
+<suite id="s1" name="Customer &amp; Read Csv">
+<suite source="/Users/macpro/project/robot_train_01/group2/customer.robot" id="s1-s1" name="Customer">
+<test id="s1-s1-t1" name="Test 1">
+<kw name="Fill in customer information">
+<arguments>
+<arg>${user_info_1}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.email}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.535" starttime="20180925 13:28:24.535"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.mobile_no}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.536" starttime="20180925 13:28:24.536"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.536" starttime="20180925 13:28:24.535"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.536" critical="yes" starttime="20180925 13:28:24.534"></status>
+</test>
+<test id="s1-s1-t2" name="Test 2">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>email=somkiat@gmail.com</arg>
+<arg>mobile_no=089332933</arg>
+</arguments>
+<assign>
+<var>&amp;{user_info}</var>
+</assign>
+<msg timestamp="20180925 13:28:24.537" level="INFO">&amp;{user_info} = { email=somkiat@gmail.com | mobile_no=089332933 }</msg>
+<status status="PASS" endtime="20180925 13:28:24.537" starttime="20180925 13:28:24.537"></status>
+</kw>
+<kw name="Fill in customer information">
+<arguments>
+<arg>${user_info}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.email}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.538" starttime="20180925 13:28:24.538"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user.mobile_no}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.539" starttime="20180925 13:28:24.538"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.539" starttime="20180925 13:28:24.538"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.539" critical="yes" starttime="20180925 13:28:24.537"></status>
+</test>
+<status status="PASS" endtime="20180925 13:28:24.540" starttime="20180925 13:28:24.526"></status>
+</suite>
+<suite source="/Users/macpro/project/robot_train_01/group2/read_csv.robot" id="s1-s2" name="Read Csv">
+<test id="s1-s2-t1" name="Try to write dictionary data to csv file">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>email=somkiat@gmail.com</arg>
+<arg>mobile_no=089332933</arg>
+</arguments>
+<assign>
+<var>&amp;{user_info}</var>
+</assign>
+<msg timestamp="20180925 13:28:24.544" level="INFO">&amp;{user_info} = { email=somkiat@gmail.com | mobile_no=089332933 }</msg>
+<status status="PASS" endtime="20180925 13:28:24.544" starttime="20180925 13:28:24.544"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${user_info}</arg>
+<arg>${user_info}</arg>
+</arguments>
+<assign>
+<var>@{all data}</var>
+</assign>
+<msg timestamp="20180925 13:28:24.545" level="INFO">@{all data} = [ {u'email': u'somkiat@gmail.com', u'mobile_no': u'089332933'} | {u'email': u'somkiat@gmail.com', u'mobile_no': u'089332933'} ]</msg>
+<status status="PASS" endtime="20180925 13:28:24.545" starttime="20180925 13:28:24.544"></status>
+</kw>
+<kw name="Write Data" library="CSVLib">
+<arguments>
+<arg>${all data}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.546" starttime="20180925 13:28:24.545"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user_info}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.547" starttime="20180925 13:28:24.547"></status>
+</kw>
+<tags>
+<tag>dev</tag>
+</tags>
+<status status="PASS" endtime="20180925 13:28:24.547" critical="yes" starttime="20180925 13:28:24.543"></status>
+</test>
+<test id="s1-s2-t2" name="Try to read from user.csv with for loop">
+<kw name="Read Data" library="CSVLib">
+<arguments>
+<arg>users.csv</arg>
+</arguments>
+<assign>
+<var>${users}</var>
+</assign>
+<msg timestamp="20180925 13:28:24.549" level="INFO">${users} = []</msg>
+<status status="PASS" endtime="20180925 13:28:24.549" starttime="20180925 13:28:24.548"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${users}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.549" starttime="20180925 13:28:24.549"></status>
+</kw>
+<kw type="for" name="${data} IN [ @{users} ]">
+<status status="PASS" endtime="20180925 13:28:24.549" starttime="20180925 13:28:24.549"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.550" critical="yes" starttime="20180925 13:28:24.548"></status>
+</test>
+<test id="s1-s2-t3" name="Try to read from user.csv">
+<kw name="Read Data" library="CSVLib">
+<arguments>
+<arg>users.csv</arg>
+</arguments>
+<assign>
+<var>${users}</var>
+</assign>
+<msg timestamp="20180925 13:28:24.550" level="INFO">${users} = []</msg>
+<status status="PASS" endtime="20180925 13:28:24.551" starttime="20180925 13:28:24.550"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${users}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:24.551" starttime="20180925 13:28:24.551"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:24.551" critical="yes" starttime="20180925 13:28:24.550"></status>
+</test>
+<status status="PASS" endtime="20180925 13:28:24.552" starttime="20180925 13:28:24.540"></status>
+</suite>
+<status status="PASS" endtime="20180925 13:28:24.553" starttime="20180925 13:28:24.502"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">dev</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Customer &amp; Read Csv" pass="5">Customer &amp; Read Csv</stat>
+<stat fail="0" id="s1-s1" name="Customer" pass="2">Customer &amp; Read Csv.Customer</stat>
+<stat fail="0" id="s1-s2" name="Read Csv" pass="3">Customer &amp; Read Csv.Read Csv</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

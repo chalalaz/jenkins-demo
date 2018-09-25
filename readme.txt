@@ -21,9 +21,9 @@ git pull origin master  #เอาไฟล์ลงมาที่เครื�
 jenkins 101
 
 1.create new project & new item
-2.configure
+2.configure Source Code Management {https://github.com/chalalaz/jenkins-demo.git}
 
 plugins
 1.robotframework
 2.build monitor
-
+3.sounds

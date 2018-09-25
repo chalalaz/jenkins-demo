@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180925 13:28:13.640" generator="Robot 3.0.3 (Python 2.7.10 on darwin)">
+<suite source="/Users/macpro/project/robot_train_01/group1/calculator.robot" id="s1" name="Calculator">
+<test id="s1-t1" name="Add 2 and 3 = 5">
+<kw name="Add" library="calculator">
+<arguments>
+<arg>${2}</arg>
+<arg>${3}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20180925 13:28:13.668" level="INFO">${result} = 5</msg>
+<status status="PASS" endtime="20180925 13:28:13.669" starttime="20180925 13:28:13.668"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:13.669" starttime="20180925 13:28:13.669"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${5}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20180925 13:28:13.670" starttime="20180925 13:28:13.669"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>5</arg>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20180925 13:28:13.670" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'int'&gt;</msg>
+<status status="PASS" endtime="20180925 13:28:13.670" starttime="20180925 13:28:13.670"></status>
+</kw>
+<status status="PASS" endtime="20180925 13:28:13.671" critical="yes" starttime="20180925 13:28:13.667"></status>
+</test>
+<status status="PASS" endtime="20180925 13:28:13.671" starttime="20180925 13:28:13.642"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Calculator" pass="1">Calculator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
