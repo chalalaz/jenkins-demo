@@ -19,7 +19,7 @@ git push -u origin master
 git pull origin master  #เอาไฟล์ลงมาที่เครื่อง
 
 jenkins 101
-
+java -jar jenkin --httpPort=9000
 1.create new project & new item
 2.configure Source Code Management {https://github.com/chalalaz/jenkins-demo.git}
 
